@@ -1,0 +1,36 @@
+---
+interface Props {
+  title: string;
+  classList?: string;
+}
+
+import '@/main.css';
+
+const {title = 'Page', classList = ''} = Astro.props;
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,300,0,0"
+    />
+    <title>{title}</title>
+  </head>
+  <body
+    class="flex min-h-screen min-w-[320px] place-items-center bg-white font-normal leading-[1.5] text-[#213547] dark:bg-[#242424] dark:text-[rgba(255,255,255,0.87)]">
+    <main slot="main-content" class={classList}>
+      <slot name="main-content" />
+    </main>
+  </body>
+</html>

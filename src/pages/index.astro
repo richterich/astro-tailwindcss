@@ -1,0 +1,28 @@
+---
+import {MainLayout} from '@layouts';
+import {Counter} from '@ui';
+---
+
+<MainLayout title="Astro Template" classList="mx-auto max-w-7xl p-8 text-center">
+  <section slot="main-content">
+    <div class="flex justify-center">
+      <a
+        href="https://astro.build/"
+        target="_blank"
+        class="font-medium text-[#646cff] hover:text-[#747bff] dark:hover:text-[#535bf2]">
+        <img
+          src="/logo.svg"
+          alt="Logo Astro"
+          class="box-content h-[6em] p-[1.5em] transition-[filter] duration-300 will-change-[filter] hover:drop-shadow-[0_0_2em_#646cffaa]"
+        />
+      </a>
+    </div>
+    <h1 class="text-[3.2em] font-bold leading-[1.1]">Hello Astro!</h1>
+    <div class="p-[2em]">
+      <Counter
+        classList="cursor-pointer rounded-lg border border-transparent bg-[#f9f9f9] px-[1.2em] py-[0.6em] text-[1em] transition-colors duration-[0.25s] hover:border-[#646cff] dark:bg-[#1a1a1a]"
+      />
+    </div>
+    <p class="text-[#888]">Click on the Astro logo to learn more</p>
+  </section>
+</MainLayout>
